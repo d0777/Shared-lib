@@ -1,10 +1,11 @@
-import com.mycompany.colinbut.Constants
-import com.mycompany.colinbut.DockerEcr
+import com.mycompany.d0777.Constants
+import com.mycompany.d0777.DockerEcr
 
 def call(Map args) {
     node {
         stage("Checkout") {
-            git credentialsId: Constants.JENKINS_GITHUB_CREDENTIALS_ID, url: "https://github.com/colinbut/${args.repo}.git"
+            git credentialsId: Constants.JENKINS_GITHUB_CREDENTIALS_ID, url: "https://github.com/d0777/${args.repo}.git"
+            
         }
 
         stage("Compile") {
