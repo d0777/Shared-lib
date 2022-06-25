@@ -18,7 +18,7 @@ def call(String repoUrl) {
            stage("Checkout Code") {
                steps {
                    git branch: 'master',
-                    url: "${"https://github.com/d0777/demo.git"}"
+                    url: "${repoUrl}"
                }
            }
            stage("Cleaning workspace") {
